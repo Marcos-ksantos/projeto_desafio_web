@@ -69,3 +69,31 @@ console.log('RESTO DA DIVISÃO ' , num3 %3)
  console.log('TESTE DE RELACIONAIS ', 10 <= 5)
  console.log('TESTE LÓGICO ', (10 > 5) && (15 < 8))
  console.log('TESTE LÓGICO ', (10 > 5) || (15 < 8))
+
+ //TESTE LÓGICO
+ let idade = 19
+
+ if(idade >=18){
+    console.log('Maior de idade')
+ }else{
+    console.log('Menor de idade')
+ }
+
+ /*
+  *RENOVAÇÃO DE CNH
+  MENOR DE 18 - NÃO PERMITIDO
+  18 ATÉ 49 - 10 ANOS
+  50 ATÉ 69 - 5 ANOS
+  70+ - 3 ANOS
+  */
+ if(idade < 18){
+ console.log(`Com a idade de ${idade}, Não é permitido possuir CNH`)
+ 
+}else if(idade < 50){
+        console.log(`Com a idade de ${idade}, 10 anos para renovar`)
+    
+    } else if(idade < 70){
+        console.log(`Com a idade de ${idade}, 5 anos para renovar`)
+    } else{  
+        console.log(`Com a idade de ${idade}, 3 anos para renovar`)
+ } 
