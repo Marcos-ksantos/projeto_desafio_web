@@ -84,12 +84,14 @@ console.log('RESTO DA DIVISÃO ' , num3 %3)
   MENOR DE 18 - NÃO PERMITIDO
   18 ATÉ 49 - 10 ANOS
   50 ATÉ 69 - 5 ANOS
-  70+ - 3 ANOS
+  +70 - 3 ANOS
   */
+
+  //ANINHAMENTO DE IF
  if(idade < 18){
  console.log(`Com a idade de ${idade}, Não é permitido possuir CNH`)
  
-}else if(idade < 50){
+    }else if(idade < 50){
         console.log(`Com a idade de ${idade}, 10 anos para renovar`)
     
     } else if(idade < 70){
