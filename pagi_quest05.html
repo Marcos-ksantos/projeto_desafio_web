@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Site</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script_quest01.js" defer></script>
+
+</head>
+<body>
+    <h1>Escreva um programa que leia as medidas dos lados de um
+        triângulo e escreva se ele é equilátero, isósceles ou
+        escaleno. Sendo que:
+        • Triângulo Equilátero: possui os 3 lados iguais.
+        • Triângulo Isóscele: possui 2 lados iguais.
+        • Triângulo Escaleno: possui 3 lados diferentes.</h1>
+    
+    <div id="div-form">
+        <h3>TRIâNGULO</h3>
+
+        <form id="formulario-pessoa">
+            <label for="hipotenusa">hipotenusa</label>
+            <input type="text" name="hipotenusa" id="hipotenusa">
+
+            <label for="adjacente">cateto adjacente</label>
+            <input type="text" name="adjacente" id="adjacente">
+
+            <label for="oposto">cateto oposto</label>
+            <input type="text" name="oposto" id="oposto">
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+        
+        <div id="div-dados">
+
+        </div>
+    </div>
+</body>
+</html>
