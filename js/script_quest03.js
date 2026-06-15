@@ -8,13 +8,16 @@ formDados.addEventListener('submit', (evt)=>{
 
 const objFormDados =  new FormData(formDados)
 
-let n1 = parseFloat(objFormDados.get('num1'))
-let n2 = parseFloat(objFormDados.get('num2'))
-let n3 = parseFloat(objFormDados.get('num3'))
+let distância = parseFloat(objFormDados.get('distância'))
+let consumo = parseFloat(objFormDados.get('consumo'))
+let gasolina = parseFloat(objFormDados.get('gasolina'))
 
-let media = (n1 + n2 + n3)/ 3
+let trajetoria = distância / consumo
+let valor = trajetoria * gasolina
 
-divResultado.innerHTML = `A MÉDIA DOS NÚMEROS É: ${media.toFixed(2).replace('.',',')}`
+divResultado.innerHTML = `A quantidade de combustível necessário para percorrer
+o trajeto é: ${trajetoria.toFixed(0).replace('.',',')}L <br> 
+O valor total a pagar com combustível para esse deslocamento é ${valor.toFixed(2).replace('.','.')}R$`
 
 formDados.reset()
 }) 
