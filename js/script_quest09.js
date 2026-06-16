@@ -9,16 +9,21 @@ formDados.addEventListener('submit', (evt)=>{
 const objFormDados =  new FormData(formDados)
 
 let nome = objFormDados.get('nome')
-let acesso = objFormDados.get('acesso')
-let senha = objFormDados.get('senha')
+let valor = parseFloat(objFormDados.get('valor'))
 
-if (acesso == 'ABDC1234' && senha == 1234){
-    cod = 'ACESSO PERMITIDO'
+if (valor <= 9){
+    situacao = '70% DE LUCRO'
+} else if (valor <= 29 ){
+    situacao = '50% DE LUCRO'
+} else if (valor <= 49){
+    situacao = '40% DE LUCRO'
 }else {
-    cod = 'ACESSO NEGADO'
-}
+    situacao = '30% DE LUCRO'
+}    
+
    
-divResultado.innerHTML = `${nome} : ${cod}`
+divResultado.innerHTML = `O PRODUTO: ${nome}<br>POSSUI O VALOR DE :${valor.toFixed(2).replace(',',',')
+}R$<br>E ${situacao}`
 
 formDados.reset()
 }) 
